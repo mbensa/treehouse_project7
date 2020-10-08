@@ -1,0 +1,24 @@
+{
+  "name": "project-7",
+  "version": "1.0.0",
+  "description": "This project is a simple static website and is a part of the Treehouse Techdegree. The goal of this project was to create web app dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-build": "node-sass scss/style.scss css/style.css",
+    "sass": "node-sass -w scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbensa/treehouse_project7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbensa/treehouse_project7/issues"
+  },
+  "homepage": "https://github.com/mbensa/treehouse_project7#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
