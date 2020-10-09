@@ -1,0 +1,11 @@
+/*Media Query Mixin*/
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint) {
+      @content;
+    }
+  } @else {
+    @error "No value could be retrieved.";
+  }
+}
