@@ -22,4 +22,10 @@
 
 .main {
   grid-area: main;
+  display: grid;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
 }
