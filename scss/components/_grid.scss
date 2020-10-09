@@ -1,3 +1,25 @@
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "navigation"
+    "main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: navigation;
+}
+
+.main {
+  grid-area: main;
+}
