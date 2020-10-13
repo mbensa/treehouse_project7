@@ -1,0 +1,53 @@
+/* ============================================= */
+/*              Header                          */
+/* ============================================= */
+
+.header {
+  display: inline-flex;
+  background-color: $top-nav;
+  height: 70px;
+
+  h1 {
+    margin-right: auto;
+    color: white;
+    padding-left: 10px;
+    align-self: center;
+    font-weight: normal;
+  }
+
+  #notifications {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon-bell {
+      width: 40%;
+    }
+  }
+
+  .user {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    .my-pic {
+      border-radius: 50%;
+      height: 40px;
+    }
+
+    h3 {
+      color: white;
+      padding-left: 15px;
+      align-self: center;
+      padding-right: 10px;
+    }
+
+    hr {
+      width: 2px;
+      height: 50px;
+      background: #5d61bf;
+      border: none;
+      align-self: center;
+      margin-right: 10px;
+    }
+  }
+}

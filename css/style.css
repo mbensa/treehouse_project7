@@ -1,7 +1,6 @@
 /* ===================================================== */
 /* Sub-Folder Imports    */
 /* ===================================================== */
-/*Media Query Mixin*/
 /* Color variables */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -343,14 +342,10 @@ p {
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
-#notifications img {
-  border-radius: 50%;
-  max-width: 20%;
-  padding: 15px 0; }
-
 img,
 svg {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 /* ============================================= */
 /*              Media Queries                    */
@@ -381,37 +376,44 @@ svg {
 /*              Navigation                       */
 /* ============================================= */
 /* ============================================= */
-/*              Icons                      */
-/* ============================================= */
-/* ============================================= */
 /*              Header                          */
 /* ============================================= */
 .header {
   display: inline-flex;
   background-color: #7477bf;
   height: 70px; }
-
-#notifications {
-  display: inline-flex; }
-  #notifications h3 {
+  .header h1 {
+    margin-right: auto;
     color: white;
-    padding-left: 15px;
+    padding-left: 10px;
     align-self: center;
-    padding-right: 10px; }
-
-h1 {
-  margin-right: auto;
-  color: white;
-  padding-left: 10px;
-  align-self: center;
-  font-weight: normal; }
-
-hr {
-  width: 2px;
-  height: 50px;
-  background: #5d61bf;
-  border: none;
-  align-self: center; }
+    font-weight: normal; }
+  .header #notifications {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header #notifications .icon-bell {
+      width: 40%; }
+  .header .user {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+    .header .user .my-pic {
+      border-radius: 50%;
+      height: 40px; }
+    .header .user h3 {
+      color: white;
+      padding-left: 15px;
+      align-self: center;
+      padding-right: 10px; }
+    .header .user hr {
+      width: 2px;
+      height: 50px;
+      background: #5d61bf;
+      border: none;
+      align-self: center;
+      margin-right: 10px; }
 
 /* ============================================= */
 /*              Grid System                      */
