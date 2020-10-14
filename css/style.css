@@ -334,6 +334,29 @@ p {
 /*              Typography                       */
 /* ============================================= */
 /* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "navigation" "main"; }
+
+.header {
+  grid-area: header; }
+
+.nav {
+  grid-area: navigation; }
+
+.main {
+  grid-area: main;
+  display: grid; }
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw; }
+
+/* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
 /* ============================================= */
@@ -414,26 +437,3 @@ svg {
       border: none;
       align-self: center;
       margin-right: 10px; }
-
-/* ============================================= */
-/*              Grid System                      */
-/* ============================================= */
-.grid-container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "header" "navigation" "main"; }
-
-.header {
-  grid-area: header; }
-
-.nav {
-  grid-area: navigation; }
-
-.main {
-  grid-area: main;
-  display: grid; }
-
-.widget-container-full,
-.widget-container-half {
-  width: 95vw; }
