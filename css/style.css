@@ -362,6 +362,15 @@ p {
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
+.main-header {
+  display: flex;
+  justify-content: center; }
+  .main-header h2 {
+    align-self: flex-start; }
+  .main-header .border {
+    border: 1px solid #dfdfdf;
+    background-color: #fbfbfb; }
+
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
@@ -398,6 +407,26 @@ svg {
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
+.nav {
+  background-color: #4d4c72;
+  max-height: 70px; }
+  .nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nav a img {
+      max-height: 40px;
+      padding: 15px; }
+
+@media (min-width: 768px) {
+  .nav {
+    max-height: initial; }
+    .nav a {
+      flex-direction: column; }
+      .nav a img {
+        max-height: 20px;
+        padding: 20px 0; } }
+
 /* ============================================= */
 /*              Header                          */
 /* ============================================= */
