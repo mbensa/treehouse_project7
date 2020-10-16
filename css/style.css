@@ -363,13 +363,34 @@ p {
 /*              Forms                            */
 /* ============================================= */
 .main-header {
-  display: flex;
-  justify-content: center; }
+  display: flex; }
   .main-header h2 {
-    align-self: flex-start; }
+    align-self: flex-start;
+    padding: 0 15px;
+    color: #676666; }
   .main-header .border {
     border: 1px solid #dfdfdf;
-    background-color: #fbfbfb; }
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%; }
+    .main-header .border #search-bar {
+      margin-right: 15px;
+      width: 40%;
+      height: 70%;
+      color: #dbdbdb;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      padding-left: 10px;
+      position: relative; }
+      .main-header .border #search-bar:focus {
+        outline: none;
+        border: 1px solid #7477bf; }
+    .main-header .border .fa-search {
+      position: absolute;
+      right: 25px;
+      color: #7477bf; }
 
 /* ============================================= */
 /*              Images                           */
@@ -389,7 +410,9 @@ svg {
   .main {
     grid-template-columns: 50%; }
   .traffic,
-  .social {
+  .social,
+  .main-header,
+  .alert {
     grid-column: 1 / span 2; }
   .daily,
   .members,

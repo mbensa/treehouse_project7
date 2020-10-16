@@ -3,12 +3,36 @@
 /* ============================================= */
 .main-header {
   display: flex;
-  justify-content: center;
   h2 {
     align-self: flex-start;
+    padding: 0 15px;
+    color: #676666;
   }
   .border {
     border: 1px solid #dfdfdf;
     background-color: #fbfbfb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    #search-bar {
+      margin-right: 15px;
+      width: 40%;
+      height: 70%;
+      color: #dbdbdb;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      padding-left: 10px;
+      position: relative;
+      &:focus {
+        outline: none;
+        border: 1px solid $top-nav;
+      }
+    }
+    .fa-search {
+      position: absolute;
+      right: 25px;
+      color: $top-nav;
+    }
   }
 }
