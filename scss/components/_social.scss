@@ -1,0 +1,80 @@
+/* ============================================= */
+/*              Social Stats                   */
+/* ============================================= */
+.social-text {
+  color: #676666;
+  text-transform: uppercase;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  .twitter-container,
+  .fb-container,
+  .google-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    background-color: #fbfbfb;
+    width: 30%;
+    .twitter-image,
+    .fb-image,
+    .google-image {
+      margin-top: 10px;
+      color: $top-nav;
+    }
+    .twitter-text,
+    .fb-text,
+    .google-text {
+      margin: 5px 0;
+      p {
+        color: $top-nav;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+        &:last-child {
+          color: black;
+          font-weight: normal;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .social-text {
+    text-align: inherit;
+  }
+  .social {
+    .twitter-container,
+    .fb-container,
+    .google-container {
+      flex-direction: row;
+      padding: 10px 10px;
+      justify-content: center;
+      .twitter-image,
+      .fb-image,
+      .google-image {
+        margin-top: 0;
+      }
+      .twitter-text,
+      .fb-text,
+      .google-text {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        p {
+          align-self: flex-start;
+          &:last-child {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/* ============================================= */
+/*              Traffic Chart                   */
+/* ============================================= */
+
+.traffic-header {
+  display: flex;
+  align-items: center;
+  h3 {
+    color: #676666;
+    padding-left: 15px;
+    text-transform: uppercase;
+  }
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    li {
+      color: #676666;
+      list-style-type: none;
+      padding-left: 5px;
+      &:last-child {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .traffic-header {
+    ul li {
+      padding-left: 15px;
+      &:last-child {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+/* ============================================= */
+/*              Daily Traffic Chart                   */
+/* ============================================= */
+.daily {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  h3 {
+    color: #676666;
+    text-transform: uppercase;
+    padding-left: 15px;
+    text-align: center;
+  }
+}
+
+.mobile {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  h3 {
+    color: #676666;
+    text-transform: uppercase;
+    padding-left: 15px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile,
+  .daily {
+    h3 {
+      text-align: inherit;
+    }
+  }
+}

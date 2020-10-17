@@ -324,7 +324,7 @@ h2 {
   font-size: 1.6rem; }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: normal; }
 
 p {
@@ -360,7 +360,7 @@ p {
 /*              Buttons                          */
 /* ============================================= */
 /* ============================================= */
-/*              Forms                            */
+/*              Dashboard                            */
 /* ============================================= */
 .main-header {
   display: flex; }
@@ -399,33 +399,6 @@ img,
 svg {
   max-width: 100%;
   height: auto; }
-
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 55px 1fr;
-    grid-template-areas: "header header" "navigation main"; }
-  .main {
-    grid-template-columns: 50%; }
-  .traffic,
-  .social,
-  .main-header,
-  .alert {
-    grid-column: 1 / span 2; }
-  .daily,
-  .members,
-  .message {
-    grid-column: 1 / span 1; }
-  .mobile,
-  .activity,
-  .settings {
-    grid-column: 2 / span 1; }
-  .widget-container-full {
-    width: 90vw; }
-  .widget-container-half {
-    width: 45vw; } }
 
 /* ============================================= */
 /*              Navigation                       */
@@ -489,3 +462,205 @@ svg {
       border: none;
       align-self: center;
       margin-right: 10px; }
+
+/* ============================================= */
+/*              Traffic Chart                   */
+/* ============================================= */
+.traffic-header {
+  display: flex;
+  align-items: center; }
+  .traffic-header h3 {
+    color: #676666;
+    padding-left: 15px;
+    text-transform: uppercase; }
+  .traffic-header ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end; }
+    .traffic-header ul li {
+      color: #676666;
+      list-style-type: none;
+      padding-left: 5px; }
+      .traffic-header ul li:last-child {
+        padding-right: 5px; }
+
+@media (min-width: 768px) {
+  .traffic-header ul li {
+    padding-left: 15px; }
+    .traffic-header ul li:last-child {
+      padding-right: 15px; } }
+
+/* ============================================= */
+/*              Daily Traffic Chart                   */
+/* ============================================= */
+.daily {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf; }
+  .daily h3 {
+    color: #676666;
+    text-transform: uppercase;
+    padding-left: 15px;
+    text-align: center; }
+
+.mobile {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf; }
+  .mobile h3 {
+    color: #676666;
+    text-transform: uppercase;
+    padding-left: 15px;
+    text-align: center; }
+
+@media (min-width: 768px) {
+  .mobile h3,
+  .daily h3 {
+    text-align: inherit; } }
+
+/* ============================================= */
+/*              Social Stats                   */
+/* ============================================= */
+.social-text {
+  color: #676666;
+  text-transform: uppercase;
+  padding-left: 15px;
+  text-align: center; }
+
+.social {
+  display: flex;
+  justify-content: space-evenly; }
+  .social .twitter-container,
+  .social .fb-container,
+  .social .google-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    background-color: #fbfbfb;
+    width: 30%; }
+    .social .twitter-container .twitter-image,
+    .social .twitter-container .fb-image,
+    .social .twitter-container .google-image,
+    .social .fb-container .twitter-image,
+    .social .fb-container .fb-image,
+    .social .fb-container .google-image,
+    .social .google-container .twitter-image,
+    .social .google-container .fb-image,
+    .social .google-container .google-image {
+      margin-top: 10px;
+      color: #7477bf; }
+    .social .twitter-container .twitter-text,
+    .social .twitter-container .fb-text,
+    .social .twitter-container .google-text,
+    .social .fb-container .twitter-text,
+    .social .fb-container .fb-text,
+    .social .fb-container .google-text,
+    .social .google-container .twitter-text,
+    .social .google-container .fb-text,
+    .social .google-container .google-text {
+      margin: 5px 0; }
+      .social .twitter-container .twitter-text p,
+      .social .twitter-container .fb-text p,
+      .social .twitter-container .google-text p,
+      .social .fb-container .twitter-text p,
+      .social .fb-container .fb-text p,
+      .social .fb-container .google-text p,
+      .social .google-container .twitter-text p,
+      .social .google-container .fb-text p,
+      .social .google-container .google-text p {
+        color: #7477bf;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0; }
+        .social .twitter-container .twitter-text p:last-child,
+        .social .twitter-container .fb-text p:last-child,
+        .social .twitter-container .google-text p:last-child,
+        .social .fb-container .twitter-text p:last-child,
+        .social .fb-container .fb-text p:last-child,
+        .social .fb-container .google-text p:last-child,
+        .social .google-container .twitter-text p:last-child,
+        .social .google-container .fb-text p:last-child,
+        .social .google-container .google-text p:last-child {
+          color: black;
+          font-weight: normal;
+          font-size: 1.4rem; }
+
+@media (min-width: 768px) {
+  .social-text {
+    text-align: inherit; }
+  .social .twitter-container,
+  .social .fb-container,
+  .social .google-container {
+    flex-direction: row;
+    padding: 10px 10px;
+    justify-content: center; }
+    .social .twitter-container .twitter-image,
+    .social .twitter-container .fb-image,
+    .social .twitter-container .google-image,
+    .social .fb-container .twitter-image,
+    .social .fb-container .fb-image,
+    .social .fb-container .google-image,
+    .social .google-container .twitter-image,
+    .social .google-container .fb-image,
+    .social .google-container .google-image {
+      margin-top: 0; }
+    .social .twitter-container .twitter-text,
+    .social .twitter-container .fb-text,
+    .social .twitter-container .google-text,
+    .social .fb-container .twitter-text,
+    .social .fb-container .fb-text,
+    .social .fb-container .google-text,
+    .social .google-container .twitter-text,
+    .social .google-container .fb-text,
+    .social .google-container .google-text {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px; }
+      .social .twitter-container .twitter-text p,
+      .social .twitter-container .fb-text p,
+      .social .twitter-container .google-text p,
+      .social .fb-container .twitter-text p,
+      .social .fb-container .fb-text p,
+      .social .fb-container .google-text p,
+      .social .google-container .twitter-text p,
+      .social .google-container .fb-text p,
+      .social .google-container .google-text p {
+        align-self: flex-start; }
+        .social .twitter-container .twitter-text p:last-child,
+        .social .twitter-container .fb-text p:last-child,
+        .social .twitter-container .google-text p:last-child,
+        .social .fb-container .twitter-text p:last-child,
+        .social .fb-container .fb-text p:last-child,
+        .social .fb-container .google-text p:last-child,
+        .social .google-container .twitter-text p:last-child,
+        .social .google-container .fb-text p:last-child,
+        .social .google-container .google-text p:last-child {
+          font-size: 3rem; } }
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "navigation main"; }
+  .main {
+    grid-template-columns: 50%; }
+  .traffic,
+  .social,
+  .main-header,
+  .alert {
+    grid-column: 1 / span 2; }
+  .daily,
+  .members,
+  .message {
+    grid-column: 1 / span 1; }
+  .mobile,
+  .activity,
+  .settings {
+    grid-column: 2 / span 1; }
+  .widget-container-full {
+    width: 90vw; }
+  .widget-container-half {
+    width: 45vw; } }
