@@ -315,7 +315,8 @@ template {
   width: 95vw; }
 
 html {
-  font: normal 62.5% Nunito, sans-serif; }
+  font: normal 62.5% Nunito, sans-serif;
+  color: #676666; }
 
 h1 {
   font-size: 2rem; }
@@ -366,8 +367,7 @@ p {
   display: flex; }
   .main-header h2 {
     align-self: flex-start;
-    padding: 0 15px;
-    color: #676666; }
+    padding: 0 15px; }
   .main-header .border {
     border: 1px solid #dfdfdf;
     background-color: #fbfbfb;
@@ -379,7 +379,6 @@ p {
       margin-right: 15px;
       width: 40%;
       height: 70%;
-      color: #676666;
       border: 1px solid #dbdbdb;
       border-radius: 5px;
       padding-left: 10px;
@@ -470,7 +469,6 @@ svg {
   display: flex;
   align-items: center; }
   .traffic-header h3 {
-    color: #676666;
     padding-left: 15px;
     text-transform: uppercase; }
   .traffic-header ul {
@@ -478,7 +476,6 @@ svg {
     width: 100%;
     justify-content: flex-end; }
     .traffic-header ul li {
-      color: #676666;
       list-style-type: none;
       padding-left: 5px; }
       .traffic-header ul li:last-child {
@@ -498,7 +495,6 @@ svg {
   border-bottom: 1px solid #dfdfdf;
   border-right: 1px solid #dfdfdf; }
   .daily h3 {
-    color: #676666;
     text-transform: uppercase;
     padding-left: 15px;
     text-align: center; }
@@ -507,7 +503,6 @@ svg {
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf; }
   .mobile h3 {
-    color: #676666;
     text-transform: uppercase;
     padding-left: 15px;
     text-align: center; }
@@ -521,7 +516,6 @@ svg {
 /*              Social Stats                   */
 /* ============================================= */
 .social-text {
-  color: #676666;
   text-transform: uppercase;
   padding-left: 15px;
   text-align: center; }
@@ -548,7 +542,8 @@ svg {
     .social .google-container .fb-image,
     .social .google-container .google-image {
       margin-top: 10px;
-      color: #7477bf; }
+      color: #7477bf;
+      font-size: 1em; }
     .social .twitter-container .twitter-text,
     .social .twitter-container .fb-text,
     .social .twitter-container .google-text,
@@ -604,7 +599,8 @@ svg {
     .social .google-container .twitter-image,
     .social .google-container .fb-image,
     .social .google-container .google-image {
-      margin-top: 0; }
+      margin-top: 0;
+      font-size: 3em; }
     .social .twitter-container .twitter-text,
     .social .twitter-container .fb-text,
     .social .twitter-container .google-text,
@@ -637,6 +633,91 @@ svg {
         .social .google-container .fb-text p:last-child,
         .social .google-container .google-text p:last-child {
           font-size: 3rem; } }
+
+/* ============================================= */
+/*              New Members                 */
+/* ============================================= */
+.members {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  margin-top: 30px;
+  margin-bottom: 20px; }
+  .members h3 {
+    text-transform: uppercase;
+    text-align: center; }
+  .members .members-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0 5px;
+    padding: 10px 0; }
+    .members .members-container:last-child {
+      border-bottom: none; }
+    .members .members-container img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+    .members .members-container .members-text {
+      padding-left: 5px;
+      margin-right: auto; }
+      .members .members-container .members-text p {
+        margin: 0;
+        font-size: 1.2rem; }
+      .members .members-container .members-text a {
+        text-decoration: none;
+        color: #7477bf; }
+    .members .members-container p {
+      font-size: 1.2rem; }
+
+/* ============================================= */
+/*               Recent Activity            */
+/* ============================================= */
+.recent-activity {
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  margin-top: 30px;
+  margin-bottom: 20px; }
+  .recent-activity h3 {
+    text-transform: uppercase;
+    text-align: center; }
+  .recent-activity .members-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0 5px;
+    padding: 10px 0; }
+    .recent-activity .members-container:last-child {
+      border-bottom: none; }
+    .recent-activity .members-container img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+    .recent-activity .members-container .members-text {
+      padding-left: 5px;
+      margin-right: auto; }
+      .recent-activity .members-container .members-text p {
+        font-size: 1.2rem;
+        margin: 0;
+        padding-right: 10px; }
+    .recent-activity .members-container .fa-angle-right {
+      font-size: 2em;
+      color: #7477bf; }
+
+@media (min-width: 768px) {
+  .recent-activity {
+    border-left: 1px solid #dfdfdf; }
+    .recent-activity h3 {
+      text-align: inherit;
+      padding-left: 15px; }
+    .recent-activity .members-container {
+      margin: 0 15px; } }
+
+.members h3 {
+  text-align: inherit;
+  padding-left: 15px; }
+
+.members .members-container {
+  margin: 0 15px; }
 
 /* ============================================= */
 /*              Media Queries                    */
