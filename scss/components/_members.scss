@@ -87,6 +87,7 @@
 @media (min-width: 768px) {
   .recent-activity {
     border-left: 1px solid #dfdfdf;
+    margin-bottom: 0;
     h3 {
       text-align: inherit;
       padding-left: 15px;
@@ -98,6 +99,7 @@
 }
 
 .members {
+  margin-bottom: 0;
   h3 {
     text-align: inherit;
     padding-left: 15px;
