@@ -427,32 +427,38 @@ svg {
     display: flex;
     flex-direction: column; }
     .message .widget-container .form-field,
-    .message .widget-container .form-area,
-    .message .widget-container .button-primary {
+    .message .widget-container .form-area {
       padding: 10px 10px;
       margin: 5px 5px;
       background-color: #fbfbfb;
-      border: 1px solid #dfdfdf; }
+      border: 1px solid #dfdfdf;
+      border-radius: 5px; }
+      .message .widget-container .form-field:focus,
+      .message .widget-container .form-area:focus {
+        outline: none;
+        border: 1px solid #7477bf; }
     .message .widget-container .button-primary {
+      padding: 10px 10px;
+      margin: 5px 5px;
       background-color: #7477bf;
       color: white;
       text-transform: uppercase;
-      font-weight: bold; }
+      font-weight: bold;
+      border: none; }
 
 @media (min-width: 768px) {
   .message {
     border-bottom: none;
-    padding-bottom: none;
-    border-right: 1px solid #dfdfdf; }
+    padding-bottom: none; }
     .message h3 {
       text-align: inherit;
       padding-left: 15px; }
     .message .widget-container .form-field,
-    .message .widget-container .form-area,
     .message .widget-container .button-primary {
       margin: 5px 15px; }
     .message .widget-container .form-area {
-      padding-bottom: 30px; } }
+      padding-bottom: 30px;
+      margin: 5px 15px; } }
 
 /* ============================================= */
 /*                  Settings               */
@@ -478,16 +484,16 @@ svg {
       display: none; }
       .settings .togBtn .switch input:checked + .slider {
         background-color: #7477bf; }
+        .settings .togBtn .switch input:checked + .slider:before {
+          -webkit-transform: translateX(55px);
+          -ms-transform: translateX(55px);
+          transform: translateX(55px); }
+        .settings .togBtn .switch input:checked + .slider .on {
+          display: block; }
+        .settings .togBtn .switch input:checked + .slider .off {
+          display: none; }
       .settings .togBtn .switch input:focus + .slider {
         box-shadow: 0 0 1px #2196f3; }
-      .settings .togBtn .switch input:checked + .slider:before {
-        -webkit-transform: translateX(55px);
-        -ms-transform: translateX(55px);
-        transform: translateX(55px); }
-      .settings .togBtn .switch input:checked + .slider .on {
-        display: block; }
-      .settings .togBtn .switch input:checked + .slider .off {
-        display: none; }
     .settings .togBtn .switch .slider {
       position: absolute;
       cursor: pointer;
@@ -521,15 +527,25 @@ svg {
         left: 50%;
         font-size: 10px; }
 
-.settings .form-field {
-  padding: 10px;
-  background-color: #fbfbfb;
-  border: 1px solid #dfdfdf;
-  margin-bottom: 10px; }
+.settings .select-timezone {
+  display: flex;
+  justify-content: center; }
+  .settings .select-timezone .form-field {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #fbfbfb;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 17px;
+    width: 100%;
+    border-radius: 5px; }
+    .settings .select-timezone .form-field:focus {
+      outline: none;
+      border: 1px solid #7477bf; }
 
 .settings .settings-button {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin-bottom: 10px; }
   .settings .settings-button button {
     background-color: #7477bf;
     color: white;
@@ -540,8 +556,18 @@ svg {
     width: 40%; }
 
 @media (min-width: 768px) {
-  .settings .togBtn {
-    justify-content: flex-start; } }
+  .settings {
+    border-left: 1px solid #dfdfdf; }
+    .settings h3 {
+      text-align: inherit;
+      padding-left: 15px; }
+    .settings .togBtn {
+      justify-content: flex-start;
+      padding-left: 15px; }
+      .settings .togBtn .switch {
+        margin-left: 50px; }
+    .settings .select-timezone .form-field {
+      margin: 0 15px 17px 15px; } }
 
 /* ============================================= */
 /*              Navigation                       */
@@ -579,6 +605,9 @@ svg {
     padding-left: 10px;
     align-self: center;
     font-weight: normal; }
+    .header h1 span {
+      vertical-align: super;
+      font-size: 1.2rem; }
   .header #notifications {
     width: 60px;
     display: flex;
@@ -686,8 +715,11 @@ svg {
     .social .google-container .fb-image,
     .social .google-container .google-image {
       margin-top: 10px;
-      color: #7477bf;
-      font-size: 1em; }
+      background-color: #7477bf;
+      height: 30px;
+      width: 30px;
+      align-self: center;
+      border-radius: 50%; }
     .social .twitter-container .twitter-text,
     .social .twitter-container .fb-text,
     .social .twitter-container .google-text,
@@ -744,7 +776,8 @@ svg {
     .social .google-container .fb-image,
     .social .google-container .google-image {
       margin-top: 0;
-      font-size: 3em; }
+      height: 60px;
+      width: 60px; }
     .social .twitter-container .twitter-text,
     .social .twitter-container .fb-text,
     .social .twitter-container .google-text,

@@ -49,18 +49,25 @@
     display: flex;
     flex-direction: column;
     .form-field,
-    .form-area,
-    .button-primary {
+    .form-area {
       padding: 10px 10px;
       margin: 5px 5px;
       background-color: #fbfbfb;
       border: 1px solid #dfdfdf;
+      border-radius: 5px;
+      &:focus {
+        outline: none;
+        border: 1px solid $top-nav;
+      }
     }
     .button-primary {
+      padding: 10px 10px;
+      margin: 5px 5px;
       background-color: $top-nav;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
+      border: none;
     }
   }
 }
@@ -69,19 +76,19 @@
   .message {
     border-bottom: none;
     padding-bottom: none;
-    border-right: 1px solid #dfdfdf;
+
     h3 {
       text-align: inherit;
       padding-left: 15px;
     }
     .widget-container {
       .form-field,
-      .form-area,
       .button-primary {
         margin: 5px 15px;
       }
       .form-area {
         padding-bottom: 30px;
+        margin: 5px 15px;
       }
     }
   }
@@ -113,20 +120,20 @@
         display: none;
         &:checked + .slider {
           background-color: $top-nav;
+          &:before {
+            -webkit-transform: translateX(55px);
+            -ms-transform: translateX(55px);
+            transform: translateX(55px);
+          }
+          & .on {
+            display: block;
+          }
+          & .off {
+            display: none;
+          }
         }
         &:focus + .slider {
           box-shadow: 0 0 1px #2196f3;
-        }
-        &:checked + .slider:before {
-          -webkit-transform: translateX(55px);
-          -ms-transform: translateX(55px);
-          transform: translateX(55px);
-        }
-        &:checked + .slider .on {
-          display: block;
-        }
-        &:checked + .slider .off {
-          display: none;
         }
       }
       .slider {
@@ -168,16 +175,27 @@
       }
     }
   }
-
-  .form-field {
-    padding: 10px;
-    background-color: #fbfbfb;
-    border: 1px solid #dfdfdf;
-    margin-bottom: 10px;
+  .select-timezone {
+    display: flex;
+    justify-content: center;
+    .form-field {
+      padding: 10px;
+      margin: 0 5px;
+      background-color: #fbfbfb;
+      border: 1px solid #dfdfdf;
+      margin-bottom: 17px;
+      width: 100%;
+      border-radius: 5px;
+      &:focus {
+        outline: none;
+        border: 1px solid $top-nav;
+      }
+    }
   }
   .settings-button {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 10px;
 
     button {
       background-color: $top-nav;
@@ -193,8 +211,22 @@
 
 @media (min-width: 768px) {
   .settings {
+    border-left: 1px solid #dfdfdf;
+    h3 {
+      text-align: inherit;
+      padding-left: 15px;
+    }
     .togBtn {
       justify-content: flex-start;
+      padding-left: 15px;
+      .switch {
+        margin-left: 50px;
+      }
+    }
+    .select-timezone {
+      .form-field {
+        margin: 0 15px 17px 15px;
+      }
     }
   }
 }

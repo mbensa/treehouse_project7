@@ -23,8 +23,11 @@
     .fb-image,
     .google-image {
       margin-top: 10px;
-      color: $top-nav;
-      font-size: 1em;
+      background-color: $top-nav;
+      height: 30px;
+      width: 30px;
+      align-self: center;
+      border-radius: 50%;
     }
     .twitter-text,
     .fb-text,
@@ -61,7 +64,8 @@
       .fb-image,
       .google-image {
         margin-top: 0;
-        font-size: 3em;
+        height: 60px;
+        width: 60px;
       }
       .twitter-text,
       .fb-text,
