@@ -562,10 +562,9 @@ svg {
       text-align: inherit;
       padding-left: 15px; }
     .settings .togBtn {
-      justify-content: flex-start;
       padding-left: 15px; }
       .settings .togBtn .switch {
-        margin-left: 50px; }
+        margin-right: 15px; }
     .settings .select-timezone .form-field {
       margin: 0 15px 17px 15px; } }
 
@@ -614,7 +613,10 @@ svg {
     align-items: center;
     justify-content: center; }
     .header #notifications .icon-bell {
-      width: 40%; }
+      width: 40%;
+      transition: width 0.4s ease-in; }
+      .header #notifications .icon-bell:hover {
+        width: 50%; }
   .header .user {
     display: inline-flex;
     align-items: center;
@@ -887,12 +889,11 @@ svg {
       text-align: inherit;
       padding-left: 15px; }
     .recent-activity .members-container {
+      margin: 0 15px; }
+  .members {
+    margin-bottom: 0; }
+    .members h3 {
+      text-align: inherit;
+      padding-left: 15px; }
+    .members .members-container {
       margin: 0 15px; } }
-
-.members {
-  margin-bottom: 0; }
-  .members h3 {
-    text-align: inherit;
-    padding-left: 15px; }
-  .members .members-container {
-    margin: 0 15px; }

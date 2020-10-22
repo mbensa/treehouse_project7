@@ -26,6 +26,10 @@
     justify-content: center;
     .icon-bell {
       width: 40%;
+      transition: width 0.4s ease-in;
+      &:hover {
+        width: 50%;
+      }
     }
   }
 
