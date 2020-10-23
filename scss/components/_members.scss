@@ -2,8 +2,8 @@
 /*              New Members                 */
 /* ============================================= */
 .members {
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: $border;
+  border-bottom: $border;
   margin-top: 30px;
   margin-bottom: 20px;
   h3 {
@@ -13,7 +13,7 @@
   .members-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: $border;
     margin: 0 5px;
     padding: 10px 0;
     &:last-child {
@@ -33,7 +33,7 @@
       }
       a {
         text-decoration: none;
-        color: $top-nav;
+        color: $main;
       }
     }
     p {
@@ -46,8 +46,8 @@
 /*               Recent Activity            */
 /* ============================================= */
 .recent-activity {
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: $border;
+  border-bottom: $border;
   margin-top: 30px;
   margin-bottom: 20px;
   h3 {
@@ -57,7 +57,7 @@
   .members-container {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: $border;
     margin: 0 5px;
     padding: 10px 0;
     &:last-child {
@@ -79,14 +79,14 @@
     }
     .fa-angle-right {
       font-size: 2em;
-      color: $top-nav;
+      color: $main;
     }
   }
 }
 
 @media (min-width: 768px) {
   .recent-activity {
-    border-left: 1px solid #dfdfdf;
+    border-left: $border;
     margin-bottom: 0;
     h3 {
       text-align: inherit;

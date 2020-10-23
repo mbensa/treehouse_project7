@@ -8,7 +8,7 @@
     padding: 0 15px;
   }
   .border {
-    border: 1px solid #dfdfdf;
+    border: $border;
     background-color: #fbfbfb;
     display: flex;
     justify-content: flex-end;
@@ -24,13 +24,13 @@
       position: relative;
       &:focus {
         outline: none;
-        border: 1px solid $top-nav;
+        border: 1px solid $main;
       }
     }
     .fa-search {
       position: absolute;
       right: 25px;
-      color: $top-nav;
+      color: $main;
     }
   }
 }
@@ -39,7 +39,7 @@
 /*              Message User                */
 /* ============================================= */
 .message {
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: $border;
   padding-bottom: 10px;
   h3 {
     text-transform: uppercase;
@@ -53,17 +53,17 @@
       padding: 10px 10px;
       margin: 5px 5px;
       background-color: #fbfbfb;
-      border: 1px solid #dfdfdf;
+      border: $border;
       border-radius: 5px;
       &:focus {
         outline: none;
-        border: 1px solid $top-nav;
+        border: 1px solid $main;
       }
     }
     .button-primary {
       padding: 10px 10px;
       margin: 5px 5px;
-      background-color: $top-nav;
+      background-color: $main;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
@@ -119,7 +119,7 @@
       input {
         display: none;
         &:checked + .slider {
-          background-color: $top-nav;
+          background-color: $main;
           &:before {
             -webkit-transform: translateX(55px);
             -ms-transform: translateX(55px);
@@ -182,13 +182,13 @@
       padding: 10px;
       margin: 0 5px;
       background-color: #fbfbfb;
-      border: 1px solid #dfdfdf;
+      border: $border;
       margin-bottom: 17px;
       width: 100%;
       border-radius: 5px;
       &:focus {
         outline: none;
-        border: 1px solid $top-nav;
+        border: 1px solid $main;
       }
     }
   }
@@ -198,7 +198,7 @@
     margin-bottom: 10px;
 
     button {
-      background-color: $top-nav;
+      background-color: $main;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
@@ -211,7 +211,7 @@
 
 @media (min-width: 768px) {
   .settings {
-    border-left: 1px solid #dfdfdf;
+    border-left: $border;
     h3 {
       text-align: inherit;
       padding-left: 15px;

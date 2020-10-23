@@ -38,9 +38,9 @@
 /*              Daily Traffic Chart                   */
 /* ============================================= */
 .daily {
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
+  border-top: $border;
+  border-bottom: $border;
+  border-right: $border;
   h3 {
     text-transform: uppercase;
     padding-left: 15px;
@@ -49,8 +49,8 @@
 }
 
 .mobile {
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
+  border-top: $border;
+  border-bottom: $border;
   h3 {
     text-transform: uppercase;
     padding-left: 15px;

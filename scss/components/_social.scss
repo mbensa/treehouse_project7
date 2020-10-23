@@ -16,14 +16,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #dfdfdf;
+    border: $border;
     background-color: #fbfbfb;
     width: 30%;
     .twitter-image,
     .fb-image,
     .google-image {
       margin-top: 10px;
-      background-color: $top-nav;
+      background-color: $main;
       height: 30px;
       width: 30px;
       border-radius: 50%;
@@ -33,7 +33,7 @@
     .google-text {
       margin: 5px 0;
       p {
-        color: $top-nav;
+        color: $main;
         font-weight: bold;
         font-size: 1.2rem;
         text-align: center;
