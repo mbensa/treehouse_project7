@@ -893,3 +893,17 @@ svg {
       padding-left: 15px; }
     .members .members-container {
       margin: 0 15px; } }
+
+/* ============================================= */
+/*              Alert Banner                */
+/* ============================================= */
+.alert .alert-banner {
+  background-color: #7477bf;
+  margin: 15px 15px 5px 15px;
+  padding: 0 10px;
+  display: flex;
+  color: white;
+  border-radius: 5px;
+  justify-content: space-between; }
+  .alert .alert-banner p {
+    font-size: 1.2em; }

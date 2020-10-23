@@ -1,0 +1,18 @@
+/* ============================================= */
+/*              Alert Banner                */
+/* ============================================= */
+
+.alert {
+  .alert-banner {
+    background-color: $main;
+    margin: 15px 15px 5px 15px;
+    padding: 0 10px;
+    display: flex;
+    color: white;
+    border-radius: 5px;
+    justify-content: space-between;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
