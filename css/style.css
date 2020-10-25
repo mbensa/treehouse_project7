@@ -609,12 +609,52 @@ svg {
     width: 60px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
     .header #notifications .icon-bell {
       width: 40%;
       transition: width 0.4s ease-in; }
       .header #notifications .icon-bell:hover {
         width: 50%; }
+    .header #notifications .dot {
+      height: 7px;
+      width: 7px;
+      background-color: #81c98f;
+      border-radius: 50%;
+      position: absolute;
+      top: 15px;
+      right: 15px; }
+  .header .pop-up {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(226, 227, 246, 0.4); }
+    .header .pop-up .pop-up-content {
+      background-color: #e2e3f6;
+      margin: 15% auto;
+      padding: 10px;
+      border: 2px solid #7477bf;
+      width: 60%;
+      border-radius: 5px; }
+      .header .pop-up .pop-up-content .close {
+        color: #5d61bf;
+        float: right;
+        font-size: 20px;
+        font-weight: bold; }
+        .header .pop-up .pop-up-content .close:hover, .header .pop-up .pop-up-content .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer; }
+      .header .pop-up .pop-up-content p {
+        color: black; }
+      .header .pop-up .pop-up-content .border {
+        border-bottom: 1px solid #7477bf;
+        padding-bottom: 15px; }
   .header .user {
     display: inline-flex;
     align-items: center;
@@ -650,13 +690,16 @@ svg {
     justify-content: flex-end; }
     .traffic-header ul li {
       list-style-type: none;
-      padding-left: 5px; }
+      margin-left: 5px; }
       .traffic-header ul li:last-child {
         padding-right: 5px; }
 
+.widget-container-full {
+  margin: 10px auto; }
+
 @media (min-width: 768px) {
   .traffic-header ul li {
-    padding-left: 15px; }
+    margin-left: 15px; }
     .traffic-header ul li:last-child {
       padding-right: 15px; } }
 
@@ -671,6 +714,8 @@ svg {
     text-transform: uppercase;
     padding-left: 15px;
     text-align: center; }
+  .daily .widget-container-half {
+    margin: 10px auto; }
 
 .mobile {
   border-top: 1px solid #dfdfdf;
@@ -684,6 +729,12 @@ svg {
   .mobile h3,
   .daily h3 {
     text-align: inherit; } }
+
+/* ============================================= */
+/*            Mobile Users Chart             */
+/* ============================================= */
+.mobile .widget-container-half {
+  margin: 10px auto; }
 
 /* ============================================= */
 /*              Social Stats                */
