@@ -46,11 +46,18 @@ window.onclick = function (event) {
 
 const trafficCanvas = document.getElementById("traffic-chart");
 
+const chartData = {
+  hourly: [0, 750, 1250, 2000, 1000, 1500, 1000, 1750, 1250, 1750, 2250],
+  daily: [0, 750, 1250, 1000, 500, 750, 1250, 1750, 1550, 900, 2250],
+  weekly: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250],
+  monthly: [0, 750, 1250, 1000, 1000, 2100, 1550, 1750, 850, 900, 2250],
+};
+
 let trafficData = {
   labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
   datasets: [
     {
-      data: [0, 750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250],
+      data: chartData["weekly"],
       backgroundColor: "rgba(116, 119, 191, .3)",
       pointBackgroundColor: "rgba(255,255,255,1)",
       pointBorderColor: "rgba(116, 119, 191, 1)",
@@ -89,6 +96,16 @@ let trafficChart = new Chart(trafficCanvas, {
   type: "line",
   data: trafficData,
   options: trafficOptions,
+});
+
+document.querySelector(".traffic-nav").addEventListener("click", (e) => {
+  if (e.target.classList.contains("traffic-nav-link")) {
+    trafficChart.data.datasets[0].data = chartData[e.target.id];
+    trafficChart.update();
+
+    document.querySelector(".traffic-nav .active").classList.remove("active");
+    e.target.classList.add("active");
+  }
 });
 
 /*************************************

@@ -690,9 +690,17 @@ svg {
     justify-content: flex-end; }
     .traffic-header ul li {
       list-style-type: none;
-      margin-left: 5px; }
+      margin-left: 5px;
+      padding: 5px 5px;
+      cursor: pointer; }
       .traffic-header ul li:last-child {
-        padding-right: 5px; }
+        margin-right: 5px; }
+    .traffic-header ul .active {
+      background-color: #81c98f;
+      border-radius: 10px;
+      color: white;
+      padding: 5px 5px;
+      font-weight: bold; }
 
 .widget-container-full {
   margin: 10px auto; }
@@ -701,7 +709,7 @@ svg {
   .traffic-header ul li {
     margin-left: 15px; }
     .traffic-header ul li:last-child {
-      padding-right: 15px; } }
+      margin-right: 15px; } }
 
 /* ============================================= */
 /*          Daily Traffic Chart              */

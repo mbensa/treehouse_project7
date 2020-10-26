@@ -16,9 +16,18 @@
     li {
       list-style-type: none;
       margin-left: 5px;
+      padding: 5px 5px;
+      cursor: pointer;
       &:last-child {
-        padding-right: 5px;
+        margin-right: 5px;
       }
+    }
+    .active {
+      background-color: #81c98f;
+      border-radius: 10px;
+      color: white;
+      padding: 5px 5px;
+      font-weight: bold;
     }
   }
 }
@@ -32,7 +41,7 @@
     ul li {
       margin-left: 15px;
       &:last-child {
-        padding-right: 15px;
+        margin-right: 15px;
       }
     }
   }
