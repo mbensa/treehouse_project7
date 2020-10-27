@@ -148,7 +148,7 @@ let dailyChart = new Chart(dailyCanvas, {
 });
 
 /*************************************
- ********MOBIEL USERS CHART***********
+ ********MOBILE USERS CHART***********
  *************************************/
 
 const mobileCanvas = document.getElementById("mobile-users-chart");
@@ -200,3 +200,20 @@ send.addEventListener("click", () => {
     alert(`Message successfully sent to: ${user.value}`);
   }
 });
+
+/*************************************
+ *******AUTOCOMPLETE FUNCTION*********
+ *************************************/
+$(function () {
+  let availableTags = ["Dale Byrd", "Dawn Wood", "Dan Oliver", "Victoria Chambers"];
+  $("#userField").autocomplete({
+    source: availableTags,
+  });
+});
+
+/*************************************
+ *****SAVING SETTINGS PREFERENCES*****
+ *************************************/
+let switchOn = document.querySelectorAll(".on");
+let switchOff = document.querySelectorAll(".off");
+let timezone = document.querySelector("#timezone");

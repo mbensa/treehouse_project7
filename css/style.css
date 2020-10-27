@@ -610,7 +610,8 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     .header #notifications .icon-bell {
       width: 40%;
       transition: width 0.4s ease-in; }
@@ -968,3 +969,5 @@ svg {
   justify-content: space-between; }
   .alert .alert-banner p {
     font-size: 1.2em; }
+  .alert .alert-banner .alert-banner-close {
+    cursor: pointer; }
