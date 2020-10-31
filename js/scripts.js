@@ -25,20 +25,27 @@ alertBanner.addEventListener("click", (e) => {
 const popUp = document.getElementById("pop-up-notification");
 const span = document.querySelector(".close");
 const bell = document.querySelector("#notifications");
+let clicks = 0;
 
-bell.onclick = function () {
-  popUp.style.display = "block";
-};
+bell.addEventListener("click", () => {
+  clicks++;
+  if (clicks > 1) {
+    popUp.style.display = "none";
+  } else {
+    popUp.style.display = "block";
+    dot.style.display = "none";
+  }
+});
 
-span.onclick = function () {
+span.addEventListener("click", () => {
   popUp.style.display = "none";
-};
+});
 
-window.onclick = function (event) {
-  if (event.target == popUp) {
+window.addEventListener("click", (e) => {
+  if (e.target == popUp) {
     popUp.style.display = "none";
   }
-};
+});
 
 /*************************************
  **********TRAFFIC CHART*************
@@ -214,6 +221,52 @@ $(function () {
 /*************************************
  *****SAVING SETTINGS PREFERENCES*****
  *************************************/
-let switchOn = document.querySelectorAll(".on");
-let switchOff = document.querySelectorAll(".off");
-let timezone = document.querySelector("#timezone");
+
+const email = document.getElementById("email");
+const profile = document.getElementById("profile");
+const timezone = document.getElementById("timezone");
+
+const emailCheckbox = localStorage.getItem("emailCheckbox");
+const profileCheckbox = localStorage.getItem("profileCheckbox");
+
+const loadSettings = function () {
+  if (emailCheckbox !== null) {
+    email.checked = emailCheckbox === "true";
+  }
+  if (profileCheckbox !== null) {
+    profile.checked = profileCheckbox === "true";
+  }
+  const selectTimezone = localStorage.getItem("selectTimezone");
+  timezone.selectedIndex = localStorage.getItem("selectTimezone");
+};
+
+function testStorage() {
+  const test = "test";
+  try {
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+if (testStorage() === true) {
+  document.getElementById("save").addEventListener("click", function () {
+    localStorage.setItem("emailCheckbox", email.checked);
+    localStorage.setItem("profileCheckbox", profile.checked);
+    localStorage.setItem("selectTimezone", timezone.selectedIndex);
+    alert("Settings successfully saved!");
+  });
+
+  document.getElementById("cancel").addEventListener("click", function () {
+    const cancel = confirm("Are you sure you want to cancel changes?");
+
+    if (cancel) {
+      localStorage.setItem("emailCheckbox", (email.checked = null));
+      localStorage.setItem("profileCheckbox", (profile.checked = null));
+      localStorage.setItem("selectTimezone", (timezone.selectedIndex = 0));
+    }
+  });
+  loadSettings();
+}
