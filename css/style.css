@@ -551,7 +551,10 @@ svg {
     font-weight: bold;
     padding: 10px 10px;
     border: none;
-    width: 40%; }
+    width: 40%;
+    cursor: pointer; }
+  .settings .settings-button .button-disabled {
+    background-color: #b2b2b2; }
 
 @media (min-width: 768px) {
   .settings {

@@ -205,6 +205,10 @@
       padding: 10px 10px;
       border: none;
       width: 40%;
+      cursor: pointer;
+    }
+    .button-disabled {
+      background-color: #b2b2b2;
     }
   }
 }
